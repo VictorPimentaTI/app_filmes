@@ -1,6 +1,5 @@
 # app_filmes
-
-A new Flutter project.
+App desenvolvido durante o Dart Week 4º edição utilizando Flutter e GetX
 
 ## Getting Started
 

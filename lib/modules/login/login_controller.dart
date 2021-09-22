@@ -1,11 +1,17 @@
+import 'package:app_filmes/services/login_service.dart';
 import 'package:app_filmes/ui/loader/loader_mixin.dart';
 import 'package:app_filmes/ui/messages/messages_mixin.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController with LoaderMixin, MessagesMixin
 {
+  final LoginService _loginService;
   final loading = false.obs;
   final message = Rxn<MessageModel> ();
+
+  LoginController({
+    required LoginService loginService,
+  }) : _loginService = loginService;
 
   @override
   void onInit() {
@@ -15,14 +21,24 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin
   }
 
   Future<void> login() async {
-    loading(true);
-    await 2.seconds.delay();
+    try
+    {
+      loading(true);
+      await _loginService.login();
+      loading(false);
+      message(MessageModel.info(title: 'Sucesso', message: 'Login realizado com sucesso'));
+    }
+    catch (e, s)
+    {
+      print(e);
+      print(s);
+      loading(false);
+      message(MessageModel.error(title: 'Login Error', message: 'Erro ao realizar Login'));
+    }
+
+    // await 2.seconds.delay();
     // await Future.delayed(Duration(seconds: 2));
-    loading(false);
-    message(MessageModel.error(title: '', message: ''));
     // Get.snackbar('Teste', 'Mensagem de teste');
-    await 1.seconds.delay();
-    message(MessageModel.info(title: '', message: ''));
   }
 
 }

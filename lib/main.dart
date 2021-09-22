@@ -1,4 +1,5 @@
-import 'package:app_filmes/application/modules/bindings/application_bindings.dart';
+import 'package:app_filmes/application/bindings/application_bindings.dart';
+import 'package:app_filmes/modules/home/home_module.dart';
 import 'package:app_filmes/modules/login/login_module.dart';
 import 'package:app_filmes/modules/splash/splash_module.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget
         // Conceito de destruction
         ...SplashModule().routers,
         ...LoginModule().routers,
+        ...HomeModule().routers,
       ],
     );
   }

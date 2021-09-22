@@ -1,6 +1,6 @@
+import 'package:app_filmes/application/ui/loader/loader_mixin.dart';
+import 'package:app_filmes/application/ui/messages/messages_mixin.dart';
 import 'package:app_filmes/services/login_service.dart';
-import 'package:app_filmes/ui/loader/loader_mixin.dart';
-import 'package:app_filmes/ui/messages/messages_mixin.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController with LoaderMixin, MessagesMixin

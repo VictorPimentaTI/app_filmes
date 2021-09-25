@@ -1,4 +1,4 @@
-import 'package:app_filmes/modules/widgets/movies_header.dart';
+import 'package:app_filmes/modules/movies/widgets/movies_header.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
     

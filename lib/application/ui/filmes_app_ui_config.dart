@@ -11,8 +11,9 @@ class FilmesAppUiConfig
     fontFamily: 'Metropolis',
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: AppBarTheme(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey,
       iconTheme: IconThemeData(color: Colors.black),
+      backwardsCompatibility: false,
       titleTextStyle: TextStyle(
         color: Color(0xff222222),
         fontSize: 18,

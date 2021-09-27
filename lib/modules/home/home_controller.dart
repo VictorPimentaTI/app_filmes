@@ -1,4 +1,4 @@
-import 'package:app_filmes/services/login_service.dart';
+import 'package:app_filmes/services/login/login_service.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController

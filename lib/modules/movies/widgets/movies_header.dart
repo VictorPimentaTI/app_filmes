@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class MoviesHeader extends StatelessWidget {
+class MoviesHeader extends StatelessWidget
+{
 
   const MoviesHeader({ Key? key }) : super(key: key);
 
@@ -15,13 +16,14 @@ class MoviesHeader extends StatelessWidget {
              children: [
                SizedBox(
                  width: Get.width,
+                 height: Get.height,
                  child: Image.asset(
                    'assets/images/header.png',
                    fit: BoxFit.cover,
                    ),
                  ),
                  Container(
-                   width: Get.width *.9,
+                   width: Get.width * .9,
                    padding: EdgeInsets.only(bottom: 20),
                    child: TextField(
                      decoration: InputDecoration(

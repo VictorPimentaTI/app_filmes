@@ -1,5 +1,5 @@
 import 'package:app_filmes/models/genre_model.dart';
-import 'package:app_filmes/repositories/login/genres/genres_repository.dart';
+import 'package:app_filmes/repositories/genres/genres_repository.dart';
 import 'package:app_filmes/services/genres/genres_service.dart';
 
 class GenresServiceImpl implements GenresService {
